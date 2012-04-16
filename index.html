@@ -31,3 +31,17 @@ layout: default
     </li>
   </ol>
 </section>
+
+<section class="slide">
+  <h2>Don't forget about syntax highlighting!</h2>
+{% highlight cl %}
+;; ID: f0c736a9-afec-3e3f-455c-40997023e130
+(defun compose (&rest funs)
+  "Return function composed of FUNS."
+  (lexical-let ((lex-funs funs))
+    (lambda (&rest args)
+      (reduce 'funcall (butlast lex-funs)
+              :from-end t
+              :initial-value (apply (car (last lex-funs)) args)))))
+{% endhighlight %}
+</section>
