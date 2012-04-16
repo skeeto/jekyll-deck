@@ -45,3 +45,23 @@ layout: default
               :initial-value (apply (car (last lex-funs)) args)))))
 {% endhighlight %}
 </section>
+
+<section class="slide">
+  <h2>Markdown is also a possiblity</h2>
+{% highlight moin %}
+## Slide Title
+* This is Markdown
+* It's simpler than HTML
+* It might be nice to use
+{% endhighlight %}
+  <ul>
+    <li>
+      However, because the <code>section</code> tag needs to wrap
+      every slide, each slide must be an individual file
+      under <code>_posts</code>.
+    </li>
+    <li>
+      See <a href="example.html">the example</a> presentation.
+    </li>
+  </ul>
+</section>
